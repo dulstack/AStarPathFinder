@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.1)
+project(AStar_pathfinder VERSION 1.0)
+find_package(wxWidgets REQUIRED COMPONENTS base core)
+include("${wxWidgets_USE_FILE}")
+add_executable(AStar src/frame.cpp src/AStar.cpp)
+target_link_libraries(AStar "${wxWidgets_LIBRARIES}")
+target_include_directories(AStar PUBLIC "${PROJECT_SOURCE_DIR}/include"  "${wxWidgets_INCLUDE_DIRECTORIES}")
